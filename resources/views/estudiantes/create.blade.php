@@ -1,4 +1,4 @@
-@extends('layouts.profesores')
+@extends('layouts.BaseBoostrap')
 
 @section('content')
 <div class="row">
@@ -13,7 +13,7 @@
 
     @if ($errors->any())
     <div class="alert alert-danger mt-3">
-            <strong>Por las chancas de mi madre!</strong> Algo fue mal..<br><br>
+            <strong>Rayos y centellas</strong> Algo fue mal..<br><br>
             <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>

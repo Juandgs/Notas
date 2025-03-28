@@ -9,7 +9,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('estudiantes', EstudiantesController::class);
+Route::resource('/estudiantes', EstudiantesController::class);
+
+Route::resource('/profesores', ProfesoresController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
