@@ -25,6 +25,7 @@
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Correo</th>
+                    <th>Acciones</th>
                 </tr>
                 @foreach ($profesores as $profesor)
                 <tr>
@@ -36,9 +37,9 @@
                     <td>
                         <a href="{{route('profesores.edit',$profesor->id)}}" class="btn btn-warning">Editar</a>
 
-                        <form action="{{route('profesores.destroy',$profesor)}}" method="post" class="d-inline">
+                        <form action="{{route('profesores.destroy',$profesor->id)}}" method="post" class="d-inline">
                             @csrf
-                            @method('delete')
+                            @method('DELETE')
                             <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>
                     </td>

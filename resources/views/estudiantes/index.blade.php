@@ -26,7 +26,7 @@
                     <th>Apellido</th>
                     <th>Correo</th>
                     <th>Fecha de Nacimiento</th>
-                    <th>Acción</th>
+                    <th>Acciones</th>
                 </tr>
                 @foreach ($estudiantes as $estudiante)
                 <tr>

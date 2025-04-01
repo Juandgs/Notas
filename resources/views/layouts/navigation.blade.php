@@ -12,15 +12,21 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    @can('ver dashboard')
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @endcan
+                    @can('ver estudiantes')
                     <x-nav-link :href="route('estudiantes.index')" :active="request()->routeIs('estudiantes.index')">
                         {{ __('Estudiantes') }}
                     </x-nav-link>
+                    @endcan
+                    @can('ver profesores')
                     <x-nav-link :href="route('profesores.index')" :active="request()->routeIs('profesores.index')">
                         {{ __('Profesores') }}
                     </x-nav-link>
+                    @endcan
                 </div>
             </div>
 

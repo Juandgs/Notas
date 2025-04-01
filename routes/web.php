@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\EstudiantesController;
-use App\http\controllers\ProfesoresController;
+use App\Http\controllers\ProfesoresController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,7 +11,10 @@ Route::get('/', function () {
 
 Route::resource('/estudiantes', EstudiantesController::class);
 
-Route::resource('/profesores', ProfesoresController::class);
+Route::resource('/profesores', ProfesoresController::class)->parameters([
+    'profesores' => 'profesor',
+]);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

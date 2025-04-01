@@ -52,11 +52,10 @@ class ProfesoresController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Profesores $profesor):View
+    public function edit(Profesores $profesor): View
     {
-        return view('profesor.edit',['profesor'=>$profesor]);
+        return view('profesores.edit', ['profesor' => $profesor]);
     }
-
     /**
      * Update the specified resource in storage.
      */
@@ -77,6 +76,6 @@ class ProfesoresController extends Controller
     public function destroy(Profesores $profesor):RedirectResponse
     {
         $profesor->delete();
-        return redirect()->route('profesores.index')->with('success', 'Estudiante eliminado correctamente');
+        return redirect()->route('profesores.index')->with('success', 'Profesor eliminado correctamente');
     }
 }

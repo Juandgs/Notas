@@ -22,32 +22,32 @@
         </div>
     @endif
 
-    <form action="{{route('profesores.update',$profesor)}}" method="POST">
-        @csrf
-        @method('PUT')
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
-                <div class="form-group">
-                    <strong>Nombre:</strong>
-                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{$profesor->nombre}}" >
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
-                <div class="form-group">
-                    <strong>Apellido:</strong>
-                    <input type="text" name="apellido" class="form-control" placeholder="Apellido" value="{{$profesor->apellido}}" >
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
-                <div class="form-group">
-                    <strong>Correo:</strong>
-                    <input type="email" name="correo" class="form-control" placeholder="Correo Electronico" value="{{$profesor->correo}}" >
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-2">
-                <button type="submit" class="btn btn-primary">Actualizar</button>
+    <form action="{{ route('profesores.update', $profesor->id) }}" method="POST">
+    @csrf
+    @method('PUT')
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+            <div class="form-group">
+                <strong>Nombre:</strong>
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $profesor->nombre }}" >
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+            <div class="form-group">
+                <strong>Apellido:</strong>
+                <input type="text" name="apellido" class="form-control" placeholder="Apellido" value="{{ $profesor->apellido }}" >
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+            <div class="form-group">
+                <strong>Correo:</strong>
+                <input type="email" name="correo" class="form-control" placeholder="Correo Electronico" value="{{ $profesor->correo }}" >
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-2">
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+    </div>
     </form>
 </div>
 @endsection
